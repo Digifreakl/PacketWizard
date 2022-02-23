@@ -36,7 +36,7 @@ async def wol_device(ctx, arg):
             send_magic_packet(mac_addr)
             await ctx.send(str("Magic Packet was sent to " + arg))
         else:
-            await ctx.send("No valid MAC-Address")                             
+            await ctx.send("Not a valid MAC-Address")                             
     else:
         await ctx.send("File does not exist")
    
@@ -47,7 +47,7 @@ async def wol_mac(ctx, arg):
             send_magic_packet(arg)
             await ctx.send(str("Magic Packet was sent to " + arg))
         else:
-            await ctx.send("No valid MAC-Address")                             
+            await ctx.send("Not a valid MAC-Address")                             
 
 
 bot.run(TOKEN)
